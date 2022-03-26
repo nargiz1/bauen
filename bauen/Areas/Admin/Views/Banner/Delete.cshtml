@@ -1,0 +1,13 @@
+﻿@model Banner
+<div class="row">
+    <div class="col-md-8">
+        <img src="~/img/slider/@Model.Image" style="width:300px" class="rounded d-block mb-3" />
+        <h4>Title: <b>@Model.Title</b></h4>
+        <h4>Subtitle: <b>@Html.Raw(Model.Subtitle)</b></h4>
+        <h4>Button: <b>@Model.ButtonText</b></h4>
+        <h4>Button Url: <b>@Model.ButtonUrl</b></h4>
+        <a asp-action="Index" class="btn btn-primary">Go Back</a>
+        <a asp-action="DeleteConfirmed" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+    </div>
+</div>
+
